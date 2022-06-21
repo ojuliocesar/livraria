@@ -19,16 +19,15 @@
     color: #fff;
 }
 
-.main-form {
-    display: flex;
-    align-items: center;
-    flex-flow: row wrap;
+.items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .form-items {
-    width: 50%;
-    padding: 27px 60px;
-    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr;
+    padding: 15px 30px;
 }
 
 .form-items label {
@@ -37,16 +36,11 @@
 }
 
 .form-items input, .form-items select {
-    width: 90%;
     padding: 20px;
     border: none;
     border-radius: 5px;
     color: #70747A;
     font-size: 20px;
-}
-
-.form-items select {
-    width: 99%;
 }
 
 .main-button {
