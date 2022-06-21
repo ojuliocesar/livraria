@@ -17,30 +17,34 @@
 
     <h1 class="main-title">Gerenciamento de Livros</h1>
 
-    <form action="">
-        <div class="main-form">
+    <form action="" class="main-form">
+        <div class="form-items">
             <label for="">Titulo</label>
-            <input type="text">
-
-            <label for="">Autor</label>
-            <input type="text">
+            <input type="text" placeholder="Digite o Título do livro!" required>
         </div>
 
-        <div class="main-form">
+        <div class="form-items">
+            <label for="">Autor</label>
+            <input type="text" placeholder="Digite o Autor do livro!" required>
+        </div>
+
+        <div class="form-items">
             <label for="">Categoria</label>
-            <select name="" id="">
+            <select name="" id="" required>
+                <option value="" disabled selected>Selecione a categoria</option>
                 <option value="">Drama</option>
                 <option value="">Ficção</option>
                 <option value="">Romance</option>
                 <option value="">Terror</option>
             </select>
-            
-            <label for="">Valor</label>
-            <input type="text" name="" id="">
         </div>
 
-        <label for="">Cadastrar</label>
-        <button type="submit" value="submit">Cadastrar</button>
+        <div class="form-items">
+            <label for="">Valor</label>
+            <input type="text" name="" id="" placeholder="100,00" required>
+        </div>
+
+        <button class="main-button" type="submit" value="submit">Cadastrar</button>
     </form>
 
 </div>
