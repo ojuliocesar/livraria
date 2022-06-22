@@ -14,39 +14,38 @@
 </head>
 <body>
 <div id="container">
-
     <h1 class="main-title">Gerenciamento de Livros</h1>
 
     <form action="" class="main-form">
         <div class="items-wrapper">
             <div class="form-items">
-                <label for="">Titulo</label>
-                <input type="text" placeholder="Digite o Título do livro" required>
+                <label for="titulo">Titulo</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Digite o Título do livro">
             </div>
     
             <div class="form-items">
-                <label for="">Autor</label>
-                <input type="text" placeholder="Digite o Autor do livro" required>
+                <label for="autor">Autor</label>
+                <input type="text" id="autor" name="autor" placeholder="Digite o Autor do livro">
             </div>
     
             <div class="form-items">
-                <label for="">Categoria</label>
-                <select name="" id="" required>
+                <label for="categoria">Categoria</label>
+                <select name="categoria" id="categoria">
                     <option value="" disabled selected>Selecione a categoria</option>
-                    <option value="">Drama</option>
-                    <option value="">Ficção</option>
-                    <option value="">Romance</option>
-                    <option value="">Terror</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Ficção">Ficção</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Terror">Terror</option>
                 </select>
             </div>
     
             <div class="form-items">
-                <label for="">Valor</label>
-                <input type="text" name="" id="" placeholder="100,00" required>
+                <label for="valor">Valor</label>
+                <input type="text" name="valor" id="valor" placeholder="100,00">
             </div>
         </div>
 
-        <button class="main-button" type="submit" value="submit">Cadastrar</button>
+        <button class="main-button" type="button" onclick="cadastrar()">Cadastrar</button>
     </form>
 
 </div>

@@ -23,6 +23,7 @@
 .items-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 .form-items {
@@ -54,4 +55,9 @@
     font-size: 25px;
     margin-top: 30px;
     background-color: #2cc76a;
+}
+
+.main-button:hover {
+    transition-duration: 0.3s;
+    background-color: #289f57;
 }
