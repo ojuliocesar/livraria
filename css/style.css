@@ -27,7 +27,7 @@
 }
 
 .form-items {
-    padding: 15px 30px;
+    padding: 15px 50px;
 }
 
 .form-items label {
@@ -55,9 +55,11 @@
     font-size: 25px;
     margin-top: 30px;
     background-color: #2cc76a;
+    transition: transform 150ms;
 }
 
 .main-button:hover {
     transition-duration: 0.3s;
     background-color: #289f57;
+    transform: scale(1.03);
 }
