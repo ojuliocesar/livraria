@@ -23,7 +23,7 @@ try {
     $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Query de inserção de dados no DB MySQL
-    $sql = "INSERT INTO tb_livros (titulo, autor, categoria, valor) VALUES ('$titulo', '$autor', '$categoria', $valor)";
+    $sql = "INSERT INTO tb_livros (titulo, autor, categorias, valor) VALUES ('$titulo', '$autor', '$categoria', $valor)";
 
     // Prepara a execução da query acima
     $comando = $conexao->prepare($sql);
@@ -34,11 +34,12 @@ try {
     // Criar um array para resposta ao usuário
     $resposta = array("resposta"=>"OK", "mensagem"=>"Cadastro realizado com sucesso!");
 
-    $json = json_encode($resposta, JSON_UNESCAPED_UNICODE);
-
-    echo $json;
-
   } catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+    // Aqui é tratado o erro e retornado ao usuárion
+    $resposta = ['resposta'=>'ERRO!', 'mensagem'=>$e->getMessage()];
   }
+
+$json = json_encode($resposta, JSON_UNESCAPED_UNICODE);
+echo $json;
+
 ?>

@@ -45,13 +45,17 @@ const cadastrar = () => {
         response.json().then(dados=>{
             //Aqui é onde iremos receber e tratar a resposta do PHP
             Swal.fire(
-                'Tudo certo',
+                'Atenção',
                 dados.mensagem,
-                'success'
+                dados.resposta == "OK" ? 'sucess' : 'error'
               )
-
             // Resetar o formulário - limpar os campos
             document.getElementById('main-form').reset()
         })
     })
+}
+// Final da função cadastrar
+
+const listar = () => {
+    fetch('backend/listar.php')
 }

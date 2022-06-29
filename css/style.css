@@ -8,9 +8,9 @@
 #container {
     width: 80%;
     margin: 15px auto;
+    padding: 15px;
     border-radius: 25px;
     background-color: #34454e;
-    height: 95vh;
 }
 
 .main-title {

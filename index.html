@@ -32,10 +32,15 @@
                 <label for="categoria">Categoria</label>
                 <select name="categoria" id="categoria">
                     <option value="" disabled selected>Selecione a categoria</option>
-                    <option value="Drama">Drama</option>
-                    <option value="Ficção">Ficção</option>
-                    <option value="Romance">Romance</option>
-                    <option value="Terror">Terror</option>
+                    <option value="1">Drama</option>
+                    <option value="2">Ficção</option>
+                    <option value="3">Romance</option>
+                    <option value="4">Terror</option>
+                    <option value="5">Suspense</option>
+                    <option value="6">Aventura</option>
+                    <option value="7">Ação</option>
+                    <option value="8">Fantasia</option>
+                    <option value="9">Infantil</option>
                 </select>
             </div>
     
@@ -47,6 +52,10 @@
 
         <button class="main-button" type="button" onclick="cadastrar()">Cadastrar</button>
     </form>
+
+    <div id="list-books">
+        <button class="main-button" type="button" onclick="listar()">Listar</button>
+    </div>
 
 </div>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
