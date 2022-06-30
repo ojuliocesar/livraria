@@ -23,7 +23,7 @@ try {
     $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Query de inserção de dados no DB MySQL
-    $sql = "INSERT INTO tb_livros (titulo, autor, categorias, valor) VALUES ('$titulo', '$autor', '$categoria', $valor)";
+    $sql = "INSERT INTO tb_livros (titulo, autor, id_categorias, valor) VALUES ('$titulo', '$autor', '$categoria', $valor)";
 
     // Prepara a execução da query acima
     $comando = $conexao->prepare($sql);

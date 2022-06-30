@@ -14,48 +14,63 @@
 </head>
 <body>
 <div id="container">
-    <h1 class="main-title">Gerenciamento de Livros</h1>
+    <section id="cadastro">
+        <h1 class="main-title">Gerenciamento de Livros</h1>
 
-    <form id="main-form">
-        <div class="items-wrapper">
-            <div class="form-items">
-                <label for="titulo">Titulo</label>
-                <input type="text" id="titulo" name="titulo" placeholder="Digite o Título do livro">
+        <form id="main-form">
+            <div class="items-wrapper">
+                <div class="form-items">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Digite o Título do livro">
+                </div>
+        
+                <div class="form-items">
+                    <label for="autor">Autor</label>
+                    <input type="text" id="autor" name="autor" placeholder="Digite o Autor do livro">
+                </div>
+        
+                <div class="form-items">
+                    <label for="categoria">Categoria</label>
+                    <select name="categoria" id="categoria">
+                        <option value="" disabled selected>Selecione a categoria</option>
+                        <option value="1">Drama</option>
+                        <option value="2">Ficção</option>
+                        <option value="3">Romance</option>
+                        <option value="4">Terror</option>
+                        <option value="5">Suspense</option>
+                        <option value="6">Aventura</option>
+                        <option value="7">Ação</option>
+                        <option value="8">Fantasia</option>
+                        <option value="9">Infantil</option>
+                    </select>
+                </div>
+        
+                <div class="form-items">
+                    <label for="valor">Valor</label>
+                    <input type="text" name="valor" id="valor" placeholder="100,00">
+                </div>
             </div>
-    
-            <div class="form-items">
-                <label for="autor">Autor</label>
-                <input type="text" id="autor" name="autor" placeholder="Digite o Autor do livro">
-            </div>
-    
-            <div class="form-items">
-                <label for="categoria">Categoria</label>
-                <select name="categoria" id="categoria">
-                    <option value="" disabled selected>Selecione a categoria</option>
-                    <option value="1">Drama</option>
-                    <option value="2">Ficção</option>
-                    <option value="3">Romance</option>
-                    <option value="4">Terror</option>
-                    <option value="5">Suspense</option>
-                    <option value="6">Aventura</option>
-                    <option value="7">Ação</option>
-                    <option value="8">Fantasia</option>
-                    <option value="9">Infantil</option>
-                </select>
-            </div>
-    
-            <div class="form-items">
-                <label for="valor">Valor</label>
-                <input type="text" name="valor" id="valor" placeholder="100,00">
-            </div>
-        </div>
 
-        <button class="main-button" type="button" onclick="cadastrar()">Cadastrar</button>
-    </form>
+            <button class="main-button" type="button" onclick="cadastrar()">Cadastrar</button>
+        </form>
+    </section>
 
-    <div id="list-books">
+    <section id="list-book">
         <button class="main-button" type="button" onclick="listar()">Listar</button>
-    </div>
+
+        <div id="list-grid">
+            <!-- <figure>
+                <img class="image-book" src="img/livro-faltando.png" alt="Imagem do Livro">
+                
+                <figcaption>
+                    <h4>Senhor dos Aneis</h4>
+                    <h6>Tolkien</h6>
+                    <small>Ficção</small>
+                    <h5>R$ 120</h5>
+                </figcaption>
+            </figure> -->
+        </div>
+    </section>
 
 </div>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

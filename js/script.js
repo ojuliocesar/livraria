@@ -47,7 +47,7 @@ const cadastrar = () => {
             Swal.fire(
                 'Atenção',
                 dados.mensagem,
-                dados.resposta == "OK" ? 'sucess' : 'error'
+                dados.resposta == "OK" ? 'success' : 'error'
               )
             // Resetar o formulário - limpar os campos
             document.getElementById('main-form').reset()
@@ -58,4 +58,28 @@ const cadastrar = () => {
 
 const listar = () => {
     fetch('backend/listar.php')
+
+    .then(response => response.json())
+    .then(resposta => {
+
+        //Aqui será manipulado o HTML com os dados retornados pelo PHP em formato json
+        //O JS monta o HTML de forma dinâmina, através de um laço(repetição)
+
+        //Limpa a div que irá armazenar a lista de Livros
+        document.getElementById('list-grid').innerHTML = ``
+
+        for(let cont = 0; cont < resposta.length; cont++) {
+            document.getElementById('list-grid').innerHTML += 
+            `<figure>
+                <img class="image-book" src="img/green.png" alt="Imagem do Livro">
+                
+                <figcaption>
+                    <h4>${resposta[cont]['titulo']}</h4>
+                    <h6>${resposta[cont]['autor']}</h6>
+                    <h5>R$ ${resposta[cont]['valor']}</h5>
+                    <button class="btn-comprar">Comprar</button>
+                </figcaption>
+            </figure>`
+        }
+    })
 }
